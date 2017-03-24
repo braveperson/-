@@ -1,0 +1,18 @@
+	#e{text-align:center;}
+				table,th,td
+				{border:1px solid red;}/*加边框,表格有双边框。因为表和th/ td元素有独立的边界。显示表的单边框，用 border-collapse属性。*/
+				
+				th,td{text-align:center;}/*th,td文字居中 left居左  right居右*/
+				
+				td{padding:20px;}/*在表的内容中控制空格之间的边框,使用td和th元素的填充属性*/
+				th{background-color:green;color:white;height:30px;}/*th背景、字体颜色设置;垂直对齐属性设置垂直对齐，比如顶部，底部或中间：*/
+				/*table{width:50%;height:30%;}/*表格占显示屏高和宽的比例*/
+				/*table{width:100px;height:80px;}/*表格占显示屏高和宽的大小值*/
+				table{margin:0 auto;} /*设置表格居中*/
+				
+				a:link {color:bule;}      /* 未访问链接*/
+				a:visited {color:#00FF00;}  /* 已访问链接 */
+				a:hover {color:#FF00FF;}  /* 鼠标移动到链接上 */
+				a:active {color:red;}  /* 鼠标点击时 */
+				
+				a{text-decoration:none;}/*鼠标去链接下划线*/

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-1-12 16:17:12 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+	<class name="cn.scxh.carmangger.model.Function" table="modules_functions">
+		<id name="function_id" type="int">
+			<column name="function_id" />
+			<generator class="native" />
+		</id>
+		<property name="function_code" type="java.lang.String">
+			<column name="function_code" />
+		</property>
+		<property name="description" type="java.lang.String">
+			<column name="description" />
+		</property>
+		<!-- 多对多关联 -->
+		<set name="roleLists" table="roles_functions" lazy="false">
+			<key column="function_id"/>
+			<many-to-many class="cn.scxh.carmangger.model.Role" column="role_id"/>
+		</set>
+		<!-- 多对一关联 -->
+		<many-to-one name="module" lazy="false" fetch="join" class="cn.scxh.carmangger.model.Module">
+			<column name="module_id" />
+		</many-to-one>
+		
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-1-12 16:17:12 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+	<class name="cn.scxh.carmangger.model.Car" table="car">
+		<id name="id" type="int">
+			<column name="id"/>
+			<generator class="native"/>	
+		</id>
+		<property name="carNums" type="java.lang.String">
+			<column name="carNum"/>
+		</property>
+		<property name="carOwnner" type="java.lang.String">
+			<column name="carOwnner"/>
+		</property>
+		<property name="telePhone" type="java.lang.String">
+			<column name="telePhone"/>
+		</property>
+		<property name="color" type="java.lang.String">
+			<column name="color"/>
+		</property>
+		<property name="Factory" type="java.lang.String">
+			<column name="Factory"/>
+		</property>
+		<property name="remarks" type="java.lang.String">
+			<column name="remarks"/>
+		</property>
+	</class>
+</hibernate-mapping>
